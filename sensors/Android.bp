@@ -6,6 +6,7 @@
 cc_library_shared {
     name: "sensors.cuscoi",
     defaults: ["hidl_defaults"],
+    init_rc: ["sensors.cuscoi.rc"],
     srcs: [
         "Sensor.cpp",
         "SensorsSubHal.cpp",
