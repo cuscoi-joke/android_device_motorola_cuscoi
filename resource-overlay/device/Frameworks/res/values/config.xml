@@ -7,13 +7,13 @@
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>67</item>
+        <item>60</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>67</item>
+        <item>50</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about booting with safe mode enabled -->
@@ -23,10 +23,12 @@
         <item>94</item>
     </integer-array>
 
-    <!-- Note: This setting is deprecated, please use
-    config_screenBrightnessSettingMinimumFloat instead -->
-    <integer name="config_screenBrightnessSettingMinimum">2</integer>
+    <!-- Minimum screen brightness setting allowed by the power manager.
+          The user is forbidden from setting the brightness below this level. -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.03418803</item>
 
+    <integer name="config_screenBrightnessSettingDefault">98</integer>
+    
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
          for debouncing the light sensor.  Different constants are used to debounce the light sensor
          when adapting to brighter or darker environments.  This parameter controls how quickly
@@ -38,7 +40,7 @@
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDim">2</integer>
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.03418803</item>
 
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
@@ -63,14 +65,17 @@
     <integer-array name="config_autoBrightnessLevels">
         <item>2</item>
         <item>4</item>
-        <item>5</item>
         <item>10</item>
+        <item>20</item>
         <item>40</item>
         <item>100</item>
         <item>325</item>
         <item>1250</item>
         <item>3500</item>
-        <item>5500</item>
+        <item>5000</item>
+        <item>10000</item>
+        <item>20000</item>
+        <item>30000</item>
     </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -86,17 +91,20 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessDisplayValuesNits">
-        <item>2</item>
+        <item>3</item>
         <item>7</item>
         <item>10</item>
-        <item>12</item>
         <item>24</item>
-        <item>95</item>
-        <item>111</item>
-        <item>149</item>
+        <item>64</item>
+        <item>82</item>
+        <item>90</item>
+        <item>105</item>
         <item>192</item>
-        <item>252</item>
+        <item>412</item>
         <item>500</item>
+        <item>700</item>
+        <item>1000</item>
+        <item>1200</item>
     </integer-array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -104,17 +112,20 @@
 
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <integer-array name="config_screenBrightnessBacklight">
-        <item>0</item>
-        <item>1</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>12</item>
-        <item>48</item>
-        <item>57</item>
-        <item>76</item>
-        <item>98</item>
-        <item>129</item>
+        <item>9</item>
+        <item>26</item>
+        <item>34</item>
+        <item>52</item>
+        <item>85</item>
+        <item>95</item>
+        <item>100</item>
+        <item>107</item>
+        <item>141</item>
+        
+        <item>200</item>
+        <item>219</item>
+        <item>229</item>
+        <item>245</item>
         <item>255</item>
     </integer-array>
 
@@ -126,22 +137,24 @@
 
          This array should be equal in size to config_screenBrightnessBacklight -->
     <integer-array name="config_screenBrightnessNits">
-        <item>0</item>
-        <item>2</item>
+        <item>3</item>
         <item>7</item>
         <item>10</item>
-        <item>12</item>
         <item>24</item>
-        <item>95</item>
-        <item>111</item>
-        <item>149</item>
+        <item>64</item>
+        <item>82</item>
+        <item>90</item>
+        <item>105</item>
         <item>192</item>
-        <item>252</item>
+        <item>412</item>
         <item>500</item>
+        <item>700</item>
+        <item>1000</item>
+        <item>1200</item>
     </integer-array>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">motorolaedge30</string>
+    <string name="config_mms_user_agent" translatable="false">motorolaedge50fusion</string>
 
     <!-- MMS user agent prolfile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
@@ -222,8 +235,8 @@
 
     <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
     <integer-array name="config_udfps_sensor_props" translatable="false">
-        <item>540</item> <!-- sensorLocationX -->
-        <item>2164</item> <!-- sensorLocationY -->
-        <item>91</item> <!-- sensorRadius -->
+        <item>610</item> <!-- sensorLocationX -->
+        <item>2440</item> <!-- sensorLocationY -->
+        <item>102</item> <!-- sensorRadius -->
     </integer-array>
 </resources>

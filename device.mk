@@ -18,10 +18,10 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 400dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Inherit from motorola sm7325-common
-$(call inherit-product, device/motorola/sm7325-common/common.mk)
+$(call inherit-product, device/motorola/sm7435-common/common.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
@@ -33,26 +33,17 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/sku_yupik/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_yupik/audio_platform_info.xml \
-    $(LOCAL_PATH)/audio/sku_yupik/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_yupik/mixer_paths.xml \
+    $(LOCAL_PATH)/audio/sku_parrot/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/audio_platform_info.xml \
+    $(LOCAL_PATH)/audio/sku_parrot/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/audio/sku_parrot/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/mixer_paths_parrot_qrd \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_ext_spkr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_ext_spkr.conf \
-    $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
-
-# Camera
-PRODUCT_PACKAGES += \
-    DubaiCameraService
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.dubai
-
-# GMS
-ifeq ($(WITH_GMS),true)
-GMS_MAKEFILE=gms_minimal.mk
-endif
+    android.hardware.biometrics.fingerprint@2.3-service.cuscoi
 
 # Init
 $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
@@ -79,7 +70,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.dubai
+    sensors.cuscoi
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -89,7 +80,7 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-dubai-game-perf.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-dubai.conf
+    $(LOCAL_PATH)/configs/thermal-engine-cuscoi-game-perf.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-dubai.conf
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/dubai/dubai-vendor.mk)
+$(call inherit-product, vendor/motorola/cuscoi/cuscoi-vendor.mk)

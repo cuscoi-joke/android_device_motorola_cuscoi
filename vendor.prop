@@ -1,5 +1,5 @@
 # Camera
-persist.vendor.camera.physical.num=4
+persist.vendor.camera.physical.num=3
 
 # NFC
 ro.vendor.hw.nfc=st

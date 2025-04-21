@@ -1,3 +1,3 @@
-Device tree for the Motorola edge 30
+Device tree for the Motorola Edge 50 Fusion
 
-Information about the device, build and install instructions can be found [here](http://wiki.lineageos.org/devices/dubai/)
+Information about the device can be found [here](https://www.gsmarena.com/motorola_edge_50_fusion-12871.php)

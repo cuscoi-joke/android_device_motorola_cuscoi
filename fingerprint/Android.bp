@@ -1,8 +1,8 @@
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.dubai",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.cuscoi",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.dubai.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.dubai.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.cuscoi.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.cuscoi.xml"],
     relative_install_path: "hw",
     srcs: [
         "service.cpp",
@@ -18,16 +18,5 @@ cc_binary {
         "android.hardware.biometrics.fingerprint@2.2",
         "android.hardware.biometrics.fingerprint@2.3",
         "com.motorola.hardware.biometric.fingerprint@1.0",
-    ],
-}
-
-cc_library_static {
-    name: "libudfps_extension.dubai",
-    srcs: ["UdfpsExtension.cpp"],
-    include_dirs: [
-        "frameworks/native/services/surfaceflinger/CompositionEngine/include"
-    ],
-    header_libs: [
-        "generated_kernel_headers",
     ],
 }
