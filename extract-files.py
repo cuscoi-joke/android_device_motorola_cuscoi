@@ -38,6 +38,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     ('vendor/bin/STFlashTool', 'vendor/lib64/sensors.moto.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
+    'vendor/lib64/libcamximageformatutils.so': blob_fixup()
+	.replace_needed('vendor.qti.hardware.display.config-V2-ndk_platform.so', 'vendor.qti.hardware.display.config-V2-ndk.so'),
 }  # fmt: skip
 
 extract_fns: extract_fns_user_type = {
