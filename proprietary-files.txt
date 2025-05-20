@@ -292,6 +292,9 @@ vendor/firmware/st21nfc_fw7.bin
 # OEM
 vendor/etc/vhw.xml
 
+# SAR firmware
+vendor/firmware/aw963xx_reg_0.bin
+
 # Sensors
 vendor/lib64/sensors.moto.so
 
