@@ -1,6 +1,8 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from edge 50 fusion (15 V1UUI35M.15-41-6 b33d6).
 ## RETAIL variant
+# Current blobs with ELF checks disabled:
+# com.motorola.hardware.biometric.fingerprint@1.1 build is unable to resolve its symbols
 
 # ACDB Data
 vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd
@@ -261,7 +263,7 @@ vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-goodixservice
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-goodixservice.rc
-vendor/lib64/com.motorola.hardware.biometric.fingerprint@1.1.so
+vendor/lib64/com.motorola.hardware.biometric.fingerprint@1.1.so;DISABLE_CHECKELF
 vendor/lib64/com.motorola.hardware.display.panel@1.0.so
 vendor/lib64/com.motorola.hardware.display.panel@1.1.so
 vendor/lib64/hw/fingerprint.goodix.default.so
