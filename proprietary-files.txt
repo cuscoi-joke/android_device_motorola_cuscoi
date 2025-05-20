@@ -247,6 +247,9 @@ vendor/lib64/camera/com.qti.tuned.mot_cusco_imx896.bin
 vendor/lib64/camera/com.qti.tuned.mot_cusco_ov32b40.bin
 vendor/lib64/camera/com.qti.tuned.mot_cusco_s5kjd1.bin
 
+# Charger firmware
+vendor/firmware/cps4038.bin
+
 # Display calibration data
 vendor/etc/display/qdcm_calib_data_ft8726_fhd_plus_120Hz_Video_panel.json
 vendor/etc/display/qdcm_calib_data_ft8726_lcd_video_mode_dsi_focaltech_panel_with_DSC.json
