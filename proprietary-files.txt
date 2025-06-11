@@ -18,6 +18,21 @@ vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/parrot_qrd/QRD_parrot_acdb_cal.acdb
 vendor/etc/acdbdata/parrot_qrd/QRD_parrot_workspaceFileXml.qwsp
 
+# ADSP modules
+vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
+vendor/lib/rfsa/adsp/libapn_dsp_skel.so
+vendor/lib/rfsa/adsp/libbitml_nsp_skel.so
+vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel.so
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so
+vendor/lib/rfsa/adsp/libhdr_skel.so
+vendor/lib/rfsa/adsp/libmctfengine_skel.so
+vendor/lib/rfsa/adsp/libQnnHtpV73.so
+vendor/lib/rfsa/adsp/libQnnHtpV73Skel.so  
+vendor/lib/rfsa/adsp/libSnpeDspV65Skel.so  
+vendor/lib/rfsa/adsp/libSnpeDspV66Skel.so  
+vendor/lib/rfsa/adsp/libSnpeHtpV73Skel.so  
+vendor/lib/rfsa/adsp/libarc_htp_driver_skel.so
+
 # Audio firmware
 vendor/firmware/fs19xx.fsm
 
